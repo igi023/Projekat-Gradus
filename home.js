@@ -17,6 +17,9 @@ document.querySelector(".scrollTop").addEventListener("click", function(e) {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
+
+
+
 const box1 = document.querySelector(".kutija1");
 const box2 = document.querySelector(".kutija2");
 
@@ -60,6 +63,8 @@ setInterval(() => {
 }, 4000);
 
 
+
+
 const followBtn = document.querySelector('.followBtn');
     const popup = document.getElementById('popup');
     const closeBtn = document.querySelector('.closeBtn');
@@ -77,6 +82,8 @@ const followBtn = document.querySelector('.followBtn');
 
 
 
+
+
 // Smooth scroll za navigaciju
 document.querySelectorAll('.main-nav a').forEach(link => {
   link.addEventListener('click', e => {
@@ -88,6 +95,8 @@ document.querySelectorAll('.main-nav a').forEach(link => {
   });
 });
 
+
+
 const hamburger = document.getElementById("hamburger");
 const nav = document.getElementById("mainNav");
 
@@ -97,6 +106,9 @@ hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
 
 });
+
+
+
 
 const navLinks = document.querySelectorAll("#mainNav a");
 

@@ -1,6 +1,4 @@
 
-/* GLOBALNE POSTAVKE */
-
 
 
 
@@ -38,7 +36,7 @@ img, video, canvas, svg {
   background-color: #FFFFFF;
   border-bottom: 1px solid #ddd;
   height: 70px;
-  z-index: 2;
+  z-index:11000;
   transition: all 0.3s ease;
 }
 
@@ -49,6 +47,7 @@ img, video, canvas, svg {
 .logo img {
   height: 35px;
   transition: 0.3s;
+  z-index: 13000;
 }
 .site-header.shrink .logo img {
   height: 34px;
@@ -63,7 +62,7 @@ img, video, canvas, svg {
 .main-nav a {
   text-decoration: none;
   color: #3B4529;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 400;
   transition: 0.3s;
 }
@@ -72,30 +71,31 @@ img, video, canvas, svg {
   font-size: 16px;
 }
 
-.main-nav a:hover {
-  color: #007b5e;
-}
-
 
 
 /* CALL US */
 .callUs {
   position: fixed;
-  top: 45px;
+  top: 10px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 2000;
+  z-index: 12000;
   transition: 0.3s;
 }
+
+
 .site-header.shrink ~ .callUs {
   top: 30px;
 }
+
+
 .callUs img {
-  width: 80px;
+  width: 90px;
   height: auto;
+  z-index: 2000;
 }
 
-/* ========================================= */
+
 /* HERO SECTION */
 
 .PrvaPozadina {
@@ -103,13 +103,13 @@ img, video, canvas, svg {
   display: grid;
   grid-template-columns: 950px 5px 1fr;
   width: 100%;
-  height: 520px;
+  height: 590px;
   background-color: #3B4529;
   position: relative;
 }
 
 .PrvaSlika {
-  width: 750px;
+  width: 930px;
   height: 100%;
   object-fit: cover;
   border-right: 5px solid #9DCA3E;
@@ -135,10 +135,12 @@ img, video, canvas, svg {
   cursor: pointer;
   z-index: 4000;
 }
+
 .scrollTop img {
   width: 40px;
   height: 40px;
 }
+
 
 .desna-strana {
   display: flex;
@@ -148,41 +150,50 @@ img, video, canvas, svg {
 }
 
 .DrugaSlika {
-  width: 380px;
-  height: 440px;
+  width: 450px;
+  height: 490px;
   position: absolute;
-  right: 30px;
+  right: 60px;
+  bottom: 50px;
 }
+
 
 .hero-text {
   color: white;
-  font-size: 50px;
+  font-size: 60px;
   position: absolute;
-  right: 60px;
+  right: 70px;
   bottom: 41%;
-  font-family: 'Lato', sans-serif; 
-  font-weight: 400;      
+  font-family: 'Audiowide', sans-serif;
+  font-weight: 400;
+  line-height: 100%;
+  text-shadow: 0 0 2px rgba(255,255,255,0.8);
+  text-transform: uppercase;
 }
+
 
 .heroText {
   color: white;
   position: absolute;
-  top: 250px;
-  right: 57px;
+  top: 280px;
+  right: 5%;
   font-family: 'Lato', sans-serif; 
-  font-weight: 400;      
-  
+  font-weight: 400; 
+  font-size: 28px;     
 }
 
-/* ========================================= */
+
+
+
 /* BLOK SECTIONS */
 
 .BlokContainer {
   display: flex;
   width: 100%;
-  align-items: center;
+ 
   position: relative;
 }
+
 
 .ElementiSpojeni {
   position: absolute;
@@ -191,22 +202,25 @@ img, video, canvas, svg {
   display: flex;
   align-items: center;
   pointer-events: none;
-  z-index: 1;
-}
-.ElementiSpojeni img:nth-child(1) {
-  margin-top: 235px;
-  margin-right:90px;
-  width: 345px;
-}
-.ElementiSpojeni img:nth-child(2) {
-  margin-left: -277px;
-  margin-top: 100px;
-  width:188px;
+  z-index: 8;
 }
 
+.ElementiSpojeni img:nth-child(1) {
+  margin-top: 238px;
+  margin-right:93px;
+  width: 320px;
+}
+
+.ElementiSpojeni img:nth-child(2) {
+  margin-left: -270px;
+  margin-top: 105px;
+  width:175px;
+}
+
+
 .Blok {
-  width: 1160px;
-  height: 160px;
+  width: 162%;
+  height: 130px;
   background-color: #3B4529;
   display: flex;
   justify-content: center;
@@ -214,41 +228,46 @@ img, video, canvas, svg {
   border-right: 5px solid #9DCA3E;
  
 }
+
 .BlokText {
   color: white;
-  font-size: 17px;
-  margin-left: 250px;
+  font-size: 18px;
+  margin-left: 160px;
 }
 
+
 .Blok2 {
-  width: 699px;
-  height: 160px;
+  width: 100%;
+  height: 130px;
   background-color: #CAD8A7;
   display: flex;
   justify-content: center;
   align-items: center;
  
 }
+
+
 .PrviText {
   color: white;
-  font-size: 57px;
+  font-size: 40px;
 }
 
-/* ========================================= */
+
 /* DRUGA POZADINA / PROJEKTI */
 
 .drugaPozadina {
   width: 100%;
-  min-height: 750px;
+  min-height: 660px;
   display: flex;
   position: relative;
   
 
 }
 
+
 /* LEVA STRANA */
 .projekti {
-  width: 752px;
+  width: 930px;
   background-color: #FFFFFF;
   border-right: 5px solid #9DCA3E;
   
@@ -261,27 +280,27 @@ img, video, canvas, svg {
   font-size: 44px;
   color: #9DCA3E;
   position: absolute;
-  top: 90px;
+  top: 80px;
   left:150px;
 }
 
 .pPrvi {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 15px;
   color: #3B4428;
   line-height: 1.6;
   position: absolute;
-  top: 210px;   /* ostaje gore */
+  top: 200px;   /* ostaje gore */
   left: 152px;  /* ostaje levo */
 }
 
 .pDrugi {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 15px;
   color: #3B4428;
   line-height: 1.6;
   position: absolute;
-  top: 310px;   /* pomereno dole */
+  top: 280px;   /* pomereno dole */
   left: 150px; /* pomereno desno */
 }
 
@@ -294,24 +313,23 @@ img, video, canvas, svg {
 .plusPattern1 {
   position: absolute;
   bottom: 35px;
-  left: 115px;
-  width: 400px;
+  left: 60px;
+  width: 295px;
 }
 
 .Sema {
   position: absolute;
-  bottom: 50px;
-  right:0;
-  height: 750px;
-  width: 460px;
+  bottom:-30px;
+  right: 5px;
+  height: 740px;
+  width: 570px;
 }
-
 
 /* ČETVRTA POZADINA / ZGRADE */
 
 .cetvrtaPozadina {
   width: 100%;
-  height: 672px;
+  height: 520px;
   position: relative;
   background-color: #3B4529;
   border-top: 5px solid #9DCA3E;
@@ -319,17 +337,19 @@ img, video, canvas, svg {
 }
 
 .Zgrada {
-  width: 370px;
-  margin-left: 250px;
+  width: 420px;
+  height: 440px;
+  margin-left: 158px;
   position: relative;
-  top: -100px;
+  top: -90px;
 }
 
 .slika {
-  width:90%;
-  height: 550px;
+  width:95%;
+  height: 480px;
   display: none;
 }
+
 .slika.aktivna {
   display: block;
 }
@@ -337,68 +357,61 @@ img, video, canvas, svg {
 .groupProdaji {
   position: absolute;
   top: 5%;
-  left: 36%;
-  width: 200px;
-  height: 50px;
+  left: 49.5%;
+  width: 190px;
+  height: 60px;
 }
 
 .pages {
   position: absolute;
-  left: 50%;
+  left: 47%;
   transform: translateX(-50%);
-  bottom: -75px;
+  bottom: -90px;
   display: flex;
-  gap: 12px;
+  gap: 14px;
 }
+
 .pages span {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   background: #bfc7a1;
   cursor: pointer;
 }
+
 .pages span:first-child {
   background: #9DCA3E;
 }
 
+
 /* DESNO TEKST */
+
 .tekstBlok {
   position: absolute;
-  top: 60px;
-  right: 30px;
-  max-width: 800px;   
+  top: 30px;
+  right: 50px;
+  max-width: 900px;
   color: white;
 }
 
-
-
 .opis {
-  margin-top: 70px;
-  font-size: 13px;     
-  line-height: 1.5;    
+  margin-top: 80px;
+  font-size: 17px;
+  line-height: 1.6;
   width: 100%;
-  
 }
 
-
 .PROJEKAT{
-position: absolute;
-right: 30px;
-font-size: 35px;
-
-
-
+  position: absolute;
+  right: 30px;
+  font-size: 37px;
 }
 
 .Stanojav{
   position: absolute;
   right: 30px;
-  top: 60px;
-  font-size: 28px;
-
-
-
-
+  top: 65px;
+  font-size: 35px;
 }
 
 .red {
@@ -407,22 +420,23 @@ font-size: 35px;
 }
 
 .red1 { margin-left: 0; }
-.red2 { margin-left: 20px; } 
-.red3 { margin-left: 40px; }  
+.red2 { margin-left: 25px; } 
+.red3 { margin-left: 70px; }  
 
 .zeleno {
   color: #9dca3e;
-  font-weight: 600;     
+  font-weight: 600;
 }
+
 
 /* STATISTIKA */
 
 .statistika {
   display: flex;
-  justify-content: space-around;  
-  margin-top: 50px;               
+  justify-content: space-around;
+  margin-top: 60px;
   width: 100%;
-  max-width: 700px;               
+  max-width: 760px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -434,63 +448,101 @@ font-size: 35px;
 }
 
 .broj {
-  font-size: 40px;      
+  font-size: 52px;
   color: #CAD8A7;
 }
 
 .tekst {
   color: #9DCA3E;
-  font-size: 14px;       
-  margin-top: 5px;
+  font-size: 18px;
+  margin-top: 6px;
 }
 
+
+/* PETA POZADINA / O NAMA */
+/* PETA POZADINA / O NAMA */
 
 /* PETA POZADINA / O NAMA */
 
 .petaPozadina1 {
   width: 100%;
-  height: 668px;
+  height: 520px;
   position: relative;
   background-color: #FFFFFF;
   border-bottom: 5px solid #9DCA3E;
-  border-right: 5px solid #9DCA3E;
 }
-.petaPozadina1 h5 {
+
+
+/* LEVI BLOK */
+
+.onamaText{
+  width: 550px;          
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  background: #FFFFFF;
+  border-right: #9DCA3E 5px solid;
+}
+
+
+/* NASLOV */
+
+.onamaText h5 {
   font-size: 48px;
   position: absolute;
   color: #9DCA3E;
-  top: 80px; left: 80px;
+  top: 3px;
+  left: 140px;
 }
-.petaPozadina1 p {
-  font-size: 12px;
+
+
+/* TEKST */
+
+.onamaText p {
+  font-size: 16px;
   position: absolute;
-  top: 240px; left: 80px;
+  top: 130px;
+  left:140px;
   width: 399px;
   line-height: 1.5;
   color: #171717;
 }
+
+
+/* RADNIK */
+
 .radnik {
   position: absolute;
-  width: 850px;
+  width: 1010px;
   height: 100%;
-  left: 32%;
+  left: 270px;        
+  object-fit: cover;
   border-left: 5px solid #9DCA3E;
+  z-index: 1;
 }
+
+
+/* DEKORACIJE */
+
 .dekoracije {
   position: absolute;
   right: 0;
   height: 100%;
-  width: 180px;
+  width: 230px;
+  object-fit: cover;
+  z-index: 2;
 }
-
 
 /* ŠESTA POZADINA / ZAŠTO NAS */
 
 .sestaPozadina1 {
   width: 100%;
-  height: 668px;
+  height: 468px;
   position: relative;
   background-color: #3B4529;
+  z-index: 10000;
 }
 
 
@@ -500,14 +552,14 @@ font-size: 35px;
   left: 37%;
   top: 2%;
   color: #9DCA3E;
-  font-size: 64px;
+  font-size: 44px;
 }
 
 .vector{
   position: relative;
-  top: 211px;
+  top: 141px;
   width: 100%;
-  height: 450px;
+  height: 320px;
 
 }
 
@@ -515,14 +567,14 @@ font-size: 35px;
   display: inline-flex;
   position: absolute;
   bottom: 14%;
-  left: 10%;
+  left: 20%;
 }
 
 .rec {
   position: relative; 
-  margin: 7px;
-  width: 212px;
-  height: 253px;
+  margin-left: 30px;
+  width: 190px;
+  height: 190px;
 }
 
 .bgRec {
@@ -533,68 +585,64 @@ font-size: 35px;
 
 .innerImg {
   position: absolute;
-  top: 35%;
-  left: 50%;
-  width: 84.3px;
-  height: 84px;
+  top: 30%;
+  left: 45%;
+  width: 67px;
+  height: 67px;
   transform: translate(-50%, -50%);
   object-fit: contain;
 }
 
-.recText{
-position: absolute;
-bottom: 35px;
-left: 40px;
-font-size: 13px;
-}
+    .recText{
+    position: absolute;
+    bottom: 35px;
+    left: 22px;
+    font-size: 12px;
+    }
+
+
 
 .sedmaPozadina{
-width: 100%;
-height: 200px;
-background-color: #FFFFFF;
-position: relative;
+  width: 100%;
+  height: 90px;
+  background-color: #FFFFFF;
+  position: relative;
+  overflow: hidden; /* važno da ne izlazi van */
 }
-
-
-
 
 .kompoNentaWrapper {
   position: relative;
   width: 100%;
-  overflow: hidden; 
-
+  overflow: hidden;
 }
 
 .kompoNenta {
-  position: absolute;
-  bottom: 20px;
-  display: inline-block;
-  white-space: nowrap;
-  animation: moveLoop 10s linear infinite;
-  
+  display: flex; /* redom prikazuje slike */
+  gap: 20px; /* po potrebi razmak između slika */
+  animation: moveLoop 5s linear infinite;
 }
 
 .kompoNenta img {
-  display: inline-block;
-  margin-right: 50px; 
+  display: block;
+  height: 50px; /* primer visine, prilagodi */
+  margin-top: 2%;
 }
 
 /* Animacija */
 @keyframes moveLoop {
   0% {
-    transform: translateX(0); 
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%); 
+    transform: translateX(-50%); /* -50% jer smo duplicirali sadržaj */
   }
 }
 
 
 
-
 .osmaPozadina{
 background-color:#3B4529;
-height: 591px;
+height: 500px;
 width:100%;
 position: relative;
 border-top: 5px solid #9DCA3E;
@@ -602,8 +650,8 @@ border-top: 5px solid #9DCA3E;
 
 .p1{
 position: absolute;
-font-size: 34px;
-top: 77px;
+font-size: 37px;
+top: 30px;
 left: 166px;
 color: #9DCA3E;
 
@@ -611,21 +659,21 @@ color: #9DCA3E;
 
  .p2{
 position: absolute;
-top: 150px;
+top: 100px;
 left: 166px;
-font-size:12px;
+font-size:16px;
 color: #FFFFFF;
 line-height: 1.6;
 }
 
 .zgradaSlika{
 position: absolute;
-height:554px;
+height:485px;
 width:675px ;
 transform: scaleX(-1);
 transform-origin: center;
 right: -78px;
-top: 39px
+top: 0;
 }
 
 
@@ -634,11 +682,12 @@ top: 39px
 
 .glavnaKutija{
   display: flex;
-  height: 220px; /* smanjeno sa 331px */
+  height: 250px; /* smanjeno sa 331px */
   position: relative;
-  top: 45%;
+  top: 50%;
   left: 12%;
   overflow: hidden;
+  width: 460px;
 }
 
 .kutija1, 
@@ -646,7 +695,7 @@ top: 39px
   position: absolute;
   top: 0;
   left: 0;
-  width: 370px;   
+  width: 400px;   
   height: 220px;  
   border: 2px solid #9DCA3E; 
   display: flex;
@@ -690,7 +739,7 @@ top: 39px
 .kutija2 .p2{
   text-align: left;   
   font-size: 16px; 
-  margin-bottom: 25px; 
+  margin-bottom: 45px; 
 }
 
 .stars1{
@@ -732,9 +781,9 @@ top: 39px
 .devetaPozadina {
   width: 100%;
   height: 160px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-top: 5px solid #9DCA3E;
-  padding: 40px 60px;
+ 
   display: flex;
   justify-content: space-between;
   align-items: flex-start; 
@@ -744,20 +793,23 @@ top: 39px
 
 
 .leviBlok {
-  display: flex;
-  align-items: flex-start;
-  gap: 30px; 
+  position: relative; 
 }
 
 .logoFooter {
-  width: 80px;
-  height: auto;
+  width: 85px;
+  position: absolute;
+  left:25px;
+  top: 20px;
+  
+ 
 }
 
 /* Blok sa kontakt ikonama + tekstom horizontalno */
 .kontakti {
   display: flex;
-  margin-top: 40px;
+  margin-top: 70px;
+  margin-left: 130px;
   flex-direction: column;
   gap: 8px; 
 }
@@ -766,17 +818,19 @@ top: 39px
   display: flex;
   align-items: center;
   gap: 8px; 
+ 
+  
 }
 
 .kontaktBlok img {
-  width: 10px;
-  height: 10px;
+  width: 19px;
+  height: 19px;
 }
 
 .kontakt {
   margin: 0;
   font-weight: 550;
-  font-size: 12x;
+  font-size: 14px;
   color: #000;
   text-decoration: underline;
   
@@ -793,20 +847,21 @@ top: 39px
   margin-top: 20px; 
   align-items: center;
   gap: 25px;
+  margin-right: 60px;
 }
 
 .futureProjects {
   color: #9DCA3E;
-  font-size: 18px;
-  margin-bottom: 60px; 
+  font-size: 20px;
+  
 }
 
 
 
 .followBtn{
   position: relative;
-  width: 120px;
-  height: 40px;
+  width: 125px;
+  height: 38px;
   background: #4E5F2D;
   border-radius: 50px;
   border: none;
@@ -819,8 +874,8 @@ top: 39px
   padding-right: 1px;
   color: white;
   font-size: 18px;
-  bottom: 70px;
-  right: 130px;
+  bottom: 30px;
+  right: 150px;
   
 }
 
@@ -832,20 +887,21 @@ top: 39px
 .followBtn .text{
   z-index: 2;
   font-size:10px;
+ 
 }
 
 /* zeleni krug */
 
  .circle{
-  width: 35px;
-  height: 39px;
+  width: 34px;
+  height: 34px;
   background: #9DCA3E;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.5s ease;
- 
+  margin-right: 1px;
 }
 
 
@@ -853,7 +909,7 @@ top: 39px
 .arrow{
   position: absolute;
   right: 12px;
-  font-size: 15px;
+  font-size: 9px;
   color: black;
   z-index: 3;
 }
@@ -874,8 +930,7 @@ top: 39px
 }
 
 
-  
-/* Overlay */
+  /* Overlay */
 .popup-overlay {
   position: fixed;
   top: 0; left: 0;
@@ -883,19 +938,19 @@ top: 39px
   display: none;
   justify-content: center;
   align-items: center;
-  z-index: 999;
+  z-index: 11999;
 }
 
 /* Frame 49 */
 .popup-box {
   box-sizing: border-box;
   position: relative;
-  width: 500px;
-  height: 600px;
+  width: 350px;   /* smanjeno */
+  height: 420px;  /* smanjeno */
   background: rgba(255, 255, 255, 0.15); 
-    backdrop-filter: blur(10px); 
+  backdrop-filter: blur(10px); 
   border: 2px solid #FFFFFF;
-  border-radius: 50px;
+  border-radius: 30px; /* smanjeno */
   transform: translateY(100vh);
   opacity: 0;
   transition: all 0.5s ease;
@@ -908,12 +963,12 @@ top: 39px
 /* Close X */
 .closeBtn {
   position: absolute;
-  width: 25px; height: 25px;
-  left: 440px; top: 30px;
+  width: 18px; height: 18px; /* smanjeno */
+  left: 310px; top: 20px;    /* prilagođeno */
   background: #9DCA3E; 
   border: none;
   color: #000; 
-  font-size: 18px;
+  font-size: 14px; /* smanjeno */
   font-weight: bold;
   cursor: pointer;
   border-radius: 4px;
@@ -922,13 +977,13 @@ top: 39px
 /* Frame 50 */
 .inner-box {
   position: absolute;
-  width: 360px; height: 500px;
-  left: calc(55% - 399px/2 + 0.5px);
-  top: 60px;
+  width: 250px; height: 350px; /* smanjeno */
+  left: calc(55% - 280px/2 + 0.5px);
+  top: 40px; /* smanjeno */
   background: rgba(255,255,255,0.3);
-  border-radius: 50px;
+  border-radius: 30px;
   text-align: center;
-  padding: 30px 20px;
+  padding: 20px 15px; /* smanjeno */
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -937,34 +992,34 @@ top: 39px
 
 /* Prvi p tag */
 .mainText {
-  font-size: 20px;
-  margin-bottom: 20px;
+  font-size: 16px; /* smanjeno */
+  margin-bottom: 15px;
 }
 
 /* Social item */
 .social-item {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin: 15px 0;
+  gap: 8px;
+  margin: 10px 0;
 }
 .social-item img {
-  width: 60px; height: 60px;
+  width: 40px; height: 40px; /* smanjeno */
   background-color:#494949;
-  border-radius: 12px;
-  padding: 5px;
+  border-radius: 8px;
+  padding: 4px;
 }
 .social-item span {
-  font-size: 16px;
+  font-size: 14px; /* smanjeno */
   color: #9DCA3E;
 }
 
 /* Drugi p tag */
 .popText {
   color: #000000;
-  font-size:16px;
+  font-size:11px; /* smanjeno */
   width: 95%;
-  margin: 20px auto;
+  margin: 15px auto;
 }
 
 /* Email Text Box */
@@ -972,12 +1027,12 @@ top: 39px
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 13px 20px;
-  gap: 10px;
-  width: 249px; height: 48px;
+  padding: 10px 15px; /* smanjeno */
+  gap: 8px;
+  width: 180px; height: 35px; /* smanjeno */
   background: #3B4529;
-  border-radius: 22.5px;
-  margin-top: 15px;
+  border-radius: 18px;
+  margin-bottom: 8px;
 }
 .email-box input {
   border: none;
@@ -986,6 +1041,7 @@ top: 39px
   width: 100%;
   text-align: center;
   outline: none;
+  font-size: 13px; /* smanjeno */
 }
 .email-box input::placeholder {
   color: #9DCA3E;
@@ -997,33 +1053,29 @@ top: 39px
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 15px 25px;
-  width: 270px; height: 55px;
+  padding: 12px 20px; /* smanjeno */
+  width:180px; height: 40px; /* smanjeno */
   background: linear-gradient(90deg, #3B4529 0%, #9DCA3E 100.01%);
-  border-radius: 22.5px;
+  border-radius: 18px;
   border: none;
   color: #fff;
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-  margin-top: 20px;
+  font-size: 15px
+
 }
-
-
 
 
 /* Donji deo sa autorskim pravima */
 .allRights {
   width: 100%;
-  height: 53px;
+  height: 33px;
   background-color: #3B4529;
 }
 
 .p3 {
   text-align: center;
-  padding-top: 17px;
+  padding-top: 6px;
   color: #FFFFFF;
-  font-size: 14px;
+  font-size: 11px;
   border-top: 5px solid #9DCA3E;
 }
 
@@ -1154,14 +1206,14 @@ top: 39px
 
   /* STATISTIKA */
   .statistika {
-    flex-direction: column;
+    flex-direction:row;
     gap: 17px;
     max-width: 90%;
     margin-top: 30px;
   }
   .broj {
     font-size: 30px;
-  }
+    
   .tekst {
     font-size: 11px;
   }
@@ -1231,7 +1283,7 @@ top: 39px
   }
   
  
-}
+  }}
 
 /*  TABLET / LARGE MOBILE */
 @media (max-width: 992px) {
@@ -1362,18 +1414,23 @@ top: 39px
     font-size: 13px;
   }
 
+  .h5{
+    text-align: center;
+
+  }
+
   /* PETA & ŠESTA POZADINA */
 
 
   .petaPozadina1 h5 {
     font-size: 18px;
     top: 20px;
-    left: 15px;
+    left: 145px;
   }
   .petaPozadina1 p {
     font-size: 10px;
-    top: 140px;
-    left: 0;
+    top: 110px;
+    left:120px;
     
     display: block;
   }
@@ -1478,6 +1535,13 @@ top: 39px
     flex-direction: column;
     align-items: center;
     gap: 15px;
+  }
+
+  .leviBlok .kontakti{
+    margin-left: 120px;
+
+
+
   }
 
   .followBtn{
