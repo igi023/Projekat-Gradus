@@ -2,121 +2,152 @@ function promeniSliku(index) {
   const slike = document.querySelectorAll(".slika");
   const dugmad = document.querySelectorAll(".pages span");
 
-  slike.forEach(slika => slika.classList.remove("aktivna"));
-  dugmad.forEach(dugme => dugme.style.background = "#bfc7a1");
+  if (!slike.length || !dugmad.length) return;
 
-  slike[index].classList.add("aktivna");
-  dugmad[index].style.background = "#9DCA3E";
+  slike.forEach((slika) => slika.classList.remove("aktivna"));
+  dugmad.forEach((dugme) => {
+    dugme.style.background = "#efefef";
+  });
+
+  if (slike[index]) {
+    slike[index].classList.add("aktivna");
+  }
+
+  if (dugmad[index]) {
+    dugmad[index].style.background = "#9DCA3E";
+  }
 }
 
+/* scroll to top */
+const scrollTopBtn = document.querySelector(".scrollTop");
 
+if (scrollTopBtn) {
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 250) {
+      scrollTopBtn.style.opacity = "1";
+      scrollTopBtn.style.pointerEvents = "auto";
+    } else {
+      scrollTopBtn.style.opacity = "1";
+      scrollTopBtn.style.pointerEvents = "auto";
+    }
+  });
 
+  scrollTopBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+}
 
-document.querySelector(".scrollTop").addEventListener("click", function(e) {
-  e.preventDefault();
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
-
-
-
-
+/* slider za misljenja */
 const box1 = document.querySelector(".kutija1");
 const box2 = document.querySelector(".kutija2");
 
-let current = 0; 
-const boxes = [box1, box2];
+if (box1 && box2) {
+  let current = 0;
+  const boxes = [box1, box2];
 
-setInterval(() => {
-  const activeBox = boxes[current];
-  const nextBox = boxes[1 - current];
+  setInterval(() => {
+    const activeBox = boxes[current];
+    const nextBox = boxes[1 - current];
+    const direction = Math.random() < 0.5 ? 1 : -1;
 
-  // nasumično odredi smer: 1 = levo, -1 = desno
-  const direction = Math.random() < 0.5 ? 1 : -1;
+    nextBox.style.transition = "none";
+    nextBox.style.transform = `translateX(${direction * 120}%)`;
+    nextBox.style.opacity = "0";
 
-  // sledeću postavimo u pravcu suprotnom od izlaza
-  nextBox.style.transition = "none";
-  nextBox.style.transform = `translateX(${direction * 120}%)`;
-  nextBox.style.opacity = "0";
+    nextBox.offsetHeight;
 
-  // repaint
-  nextBox.offsetHeight;
+    activeBox.style.transition =
+      "transform 2.5s ease-in-out, opacity 2.5s ease-in-out";
+    nextBox.style.transition =
+      "transform 2.5s ease-in-out, opacity 2.5s ease-in-out";
 
-  // uključimo animaciju
-  activeBox.style.transition = "transform 2.5s ease-in-out, opacity 2.5s ease-in-out";
-  nextBox.style.transition = "transform 2.5s ease-in-out, opacity 2.5s ease-in-out";
+    activeBox.style.transform = `translateX(${direction * -120}%)`;
+    activeBox.style.opacity = "0";
 
-  // animacija
-  activeBox.style.transform = `translateX(${direction * -120}%)`;
-  activeBox.style.opacity = "0";
+    nextBox.style.transform = "translateX(0)";
+    nextBox.style.opacity = "1";
 
-  nextBox.style.transform = "translateX(0)";
-  nextBox.style.opacity = "1";
+    setTimeout(() => {
+      activeBox.style.transition = "none";
+      activeBox.style.transform = `translateX(${direction * 120}%)`;
+    }, 2500);
 
-  // reset pozicije stare kutije
-  setTimeout(() => {
-    activeBox.style.transition = "none";
-    activeBox.style.transform = `translateX(${direction * 120}%)`;
-  }, 2500);
+    current = 1 - current;
+  }, 4000);
+}
 
-  current = 1 - current;
+/* popup */
+const followBtn = document.querySelector(".followBtn");
+const popup = document.getElementById("popup");
+const closeBtn = document.querySelector(".closeBtn");
 
-}, 4000);
+if (followBtn && popup && closeBtn) {
+  followBtn.addEventListener("click", () => {
+    popup.style.display = "flex";
+    setTimeout(() => popup.classList.add("active"), 10);
+  });
 
+  closeBtn.addEventListener("click", () => {
+    popup.classList.remove("active");
+    setTimeout(() => {
+      popup.style.display = "none";
+    }, 500);
+  });
 
+  popup.addEventListener("click", (e) => {
+    if (e.target === popup) {
+      popup.classList.remove("active");
+      setTimeout(() => {
+        popup.style.display = "none";
+      }, 500);
+    }
+  });
+}
 
-
-const followBtn = document.querySelector('.followBtn');
-    const popup = document.getElementById('popup');
-    const closeBtn = document.querySelector('.closeBtn');
-
-    followBtn.addEventListener('click', () => {
-      popup.style.display = 'flex';
-      setTimeout(() => popup.classList.add('active'), 10);
-    });
-
-    closeBtn.addEventListener('click', () => {
-      popup.classList.remove('active');
-      setTimeout(() => popup.style.display = 'none', 500);
-    });
-
-
-
-
-
-
-// Smooth scroll za navigaciju
-document.querySelectorAll('.main-nav a').forEach(link => {
-  link.addEventListener('click', e => {
+/* smooth scroll za navigaciju */
+document.querySelectorAll(".main-nav a").forEach((link) => {
+  link.addEventListener("click", (e) => {
     e.preventDefault();
-    const target = document.querySelector(link.getAttribute('href'));
-    if(target){
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    const href = link.getAttribute("href");
+    const target = document.querySelector(href);
+
+    if (target) {
+      const headerOffset = 86;
+      const targetPosition =
+        target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: targetPosition,
+        behavior: "smooth",
+      });
+    }
+
+    if (nav && hamburger) {
+      nav.classList.remove("active");
+      hamburger.classList.remove("active");
+      document.body.style.overflow = "";
     }
   });
 });
 
-
-
+/* hamburger */
 const hamburger = document.getElementById("hamburger");
 const nav = document.getElementById("mainNav");
 
-hamburger.addEventListener("click", () => {
+if (hamburger && nav) {
+  hamburger.addEventListener("click", () => {
+    nav.classList.toggle("active");
+    hamburger.classList.toggle("active");
 
-  nav.classList.toggle("active");
-  hamburger.classList.toggle("active");
-
-});
-
-
-
-
-const navLinks = document.querySelectorAll("#mainNav a");
-
-navLinks.forEach(link => {
-  link.addEventListener("click", () => {
-
-    nav.classList.remove("active");
-    hamburger.classList.remove("active");
-
+    if (nav.classList.contains("active")) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
   });
-});
+}

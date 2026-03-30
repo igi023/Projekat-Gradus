@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow" />
 
     <title>Gradus Project</title>
 
@@ -11,25 +11,25 @@
       name="description"
       content="Gradus Project - Od prvog dana, gradimo na poverenju, kvalitetu i profesionalizmu"
     />
+    <meta
+      name="keywords"
+      content="Gradnja stanova, stanovi Beograd, investitor stanovi, gradus project"
+    />
 
-    <!-- CSS -->
     <link rel="stylesheet" href="index.css" />
 
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Audiowide&display=swap"
       rel="stylesheet"
     />
   </head>
 
   <body>
-
-
-
+    <!-- HEADER -->
     <header class="site-header">
       <div class="logo">
         <img src="ProjectPics/head logo.svg" alt="GRADUS logo" />
       </div>
-
 
       <div class="hamburger" id="hamburger">
         <span></span>
@@ -37,7 +37,6 @@
         <span></span>
       </div>
 
-      <!-- NAVIGACIJA -->
       <nav class="main-nav" id="mainNav">
         <ul>
           <li><a href="#projekti">PROJEKTI</a></li>
@@ -47,7 +46,6 @@
         </ul>
       </nav>
 
-      <!-- CALL US -->
       <div class="callUs">
         <a href="tel:063610747">
           <img src="ProjectPics/call us button 1.svg" alt="Call us" />
@@ -55,16 +53,13 @@
       </div>
     </header>
 
-
-
-
-    <!-- HERO / PRVA POZADINA -->
+    <!-- HERO -->
     <section class="PrvaPozadina">
       <div class="leva-strana">
         <img class="PrvaSlika" src="ProjectPics/hero slika.png" alt="Zgrada" />
       </div>
 
-      <div class="separator"></div>
+      
 
       <div class="desna-strana">
         <a href="#" class="scrollTop">
@@ -77,17 +72,14 @@
           alt="Dekoracija"
         />
 
-        <h1 class="hero-text">VAŠ NOVI DOM</h1>
-        <h2 class="heroText">POČINJE OVDE</h2>
-
+        <div class="hero-content">
+          <h1 class="hero-text">VAŠ NOVI DOM</h1>
+          <h2 class="heroText">POČINJE OVDE</h2>
+        </div>
       </div>
     </section>
 
-
-
-
-
-    <!-- BLOK / INFORMACIJE -->
+    <!-- BLOK -->
     <section class="BlokContainer">
       <div class="ElementiSpojeni">
         <img src="ProjectPics/element 4.png" alt="element" />
@@ -97,7 +89,7 @@
       <div class="Blok">
         <p class="BlokText">
           Od prvog dana, gradimo na poverenju,<br />
-          <span class="drugiRed"> kvalitetu i profesionalizmu. </span>
+          <span class="drugiRed">kvalitetu i profesionalizmu.</span>
         </p>
       </div>
 
@@ -106,144 +98,91 @@
       </div>
     </section>
 
-
-
-
-    <!-- DRUGA POZADINA / PROJEKTI -->
-    <section class="drugaPozadina"  id="projekti">
+    <!-- PROJEKTI -->
+    <section class="drugaPozadina" id="projekti">
       <div class="projekti">
         <h3>PROJEKTI</h3>
 
-
-
         <p class="pPrvi">
           Kod svih naših projekata smo poštovali najviše standarde gradnje.
-          Moderni stanovi, različitih<br />
-          struktura. Potpuni utisak ćete steći kada budete videli i doživeli,
-          zato nas pozovite i zakažite <br />
-          sastanak. <span class="boldTekst">Dobro došli!</span><br>
+          Moderni stanovi, različitih struktura. Potpuni utisak ćete steći kada
+          budete videli i doživeli, zato nas pozovite i zakažite sastanak.
+          <span class="boldTekst">Dobro došli!</span>
         </p>
 
-
-          
         <p class="pDrugi">
           Kod svih naših projekata smo poštovali najviše standarde gradnje.
-          Moderni stanovi, različitih <br />struktura. Potpuni utisak ćete steći
-          kada budete videli i doživeli, zato nas pozovite i zakažite<br/>
-          sastanak. <span class="boldTekst">Dobro došli!</span> Kod svih naših
-          projekata smo poštovali najviše standarde gradnje.<br/>
           Moderni stanovi, različitih struktura. Potpuni utisak ćete steći kada
-          budete videli i doživeli, <br />
+          budete videli i doživeli, zato nas pozovite i zakažite sastanak.
+          <span class="boldTekst">Dobro došli!</span> Kod svih naših projekata
+          smo poštovali najviše standarde gradnje. Moderni stanovi, različitih
+          struktura. Potpuni utisak ćete steći kada budete videli i doživeli,
           zato nas pozovite i zakažite sastanak.
           <span class="boldTekst">Dobro došli!</span>
         </p>
+
+        <img
+          class="plusPattern1"
+          src="ProjectPics/plus pattern (1).png"
+          alt="Dekoracija"
+        />
       </div>
 
-      
-
-      <img
-        class="plusPattern1"
-        src="ProjectPics/plus pattern (1).png"
-        alt="Dekoracija"
-      />
-
-
-
-      <img
-        class="Sema"
-        src="ProjectPics/engineer_supplies_mockup 1.png"
-        alt="SemaCrtez"
-      />
+      <div class="semaWrapper">
+        <img
+          class="Sema"
+          src="ProjectPics/engineer_supplies_mockup 1.png"
+          alt="SemaCrtez"
+        />
+      </div>
     </section>
 
-
-
-    <!-- ČETVRTA POZADINA / SLIKE I TEKST -->
+    <!-- CETVRTA POZADINA -->
     <section class="cetvrtaPozadina">
-      <!-- LEVA SLIKA -->
       <div class="Zgrada">
-        <!-- SVE SLIKE -->
         <img
           class="slika aktivna"
           src="ProjectPics/stanoja-glavasa-03-scaled 4.png"
           alt="Zgrada"
         />
-        <img
-          class="slika"
-          src="ProjectPics/hodnik.jpg"
-          alt="hodnik"
-        />
-        <img
-          class="slika"
-          src="ProjectPics/Zgrada3.png"
-          alt="Zgrada3"
-        />
-        <img
-          class="slika"
-          src="ProjectPics/LJUDI4.jpg"
-          alt="LJUDI4"
-        />
+        <img class="slika" src="ProjectPics/hodnik.jpg" alt="hodnik" />
+        <img class="slika" src="ProjectPics/Zgrada3.png" alt="Zgrada3" />
+        <img class="slika" src="ProjectPics/LJUDI4.jpg" alt="LJUDI4" />
 
-
-
-
-        <!-- Reklama -->
         <img class="groupProdaji" src="ProjectPics/reklama.png" alt="prodaji" />
 
-
-
-        <!-- PAGES dugmad -->
         <div class="pages">
           <span onclick="promeniSliku(0)"></span>
           <span onclick="promeniSliku(1)"></span>
           <span onclick="promeniSliku(2)"></span>
           <span onclick="promeniSliku(3)"></span>
         </div>
-
       </div>
 
-
-
-      <!-- DESNO TEKST -->
       <div class="tekstBlok">
         <h4>
-          <span class="PROJEKAT">PROJEKAT</span> <br>
+          <span class="PROJEKAT">PROJEKAT</span>
           <span class="Stanojav">STANOJA GLAVAŠA</span>
         </h4>
 
-
-
         <p class="opis">
           <span class="red red1">
-            Zgrada u ulici
-            <span class="zeleno">Stanoja Glavaša 25</span>
-            nalazi se na atraktivnoj gradskoj lokaciji, u blizini Trga republike
-            i
+            Zgrada u ulici <span class="zeleno">Stanoja Glavaša 25</span> nalazi
+            se na atraktivnoj gradskoj lokaciji, u blizini Trga republike i
           </span>
-
-
 
           <span class="red red2">
             Botaničke bašte. Zgrada je spratnosti
-            <span class="zeleno">2Po+P+6+Ps</span>
-            i obuhvata ukupno
-            <span class="zeleno">4.030,96m²</span>
-            stambenog
+            <span class="zeleno">2Po+P+6+Ps</span> i obuhvata ukupno
+            <span class="zeleno">4.030,96m²</span> stambenog
           </span>
-
-
 
           <span class="red red3">
-            prostora i
-            <span class="zeleno">75,80 m²</span>
-            lokala. Projektovana su
-            <span class="zeleno">32</span>
-            stana, od čega je trenutno dostupno
-            <span class="zeleno">19</span>.
+            prostora i <span class="zeleno">75,80 m²</span> lokala.
+            Projektovana su <span class="zeleno">32</span> stana, od čega je
+            trenutno dostupno <span class="zeleno">19</span>.
           </span>
         </p>
-
-
 
         <div class="statistika">
           <div class="item">
@@ -266,107 +205,104 @@
       </div>
     </section>
 
+    <!-- O NAMA -->
+    <section class="petaPozadina1" id="onama">
+     
 
 
-    <!-- PETA POZADINA / O NAMA -->
-    <section class="petaPozadina">
+      <div class="onamaText">
+        <h5>O NAMA</h5>
+        <p>
+          Posvećeni smo izgradnji modernih i <br> funkcionalnih stambenih prostora. <br>
+          Kroz savremeni dizajn i funkcionalna rešenja obezbeđujemo kvalitet,
+          komfor i <br> dugotrajnu vrednost. <br> Svakom projektu pristupamo sa posebnom <br>
+          pažnjom, birajući proverene materijale i <br> prateći najviše standarde
+          gradnje. <br> Naš cilj je da svaki prostor postane mesto u <br> kojem se ljudi
+          osećaju bezbedno i zadovoljno.
+        </p>
 
-      <div class="petaPozadina1" id="onama">
-
-        <div class="onamaText">
-          <h5>O NAMA</h5>
-          <p>
-            Posvećeni smo izgradnji modernih i <br /> funkcionalnih stambenih prostora.<br />
-            
-            Kroz savremeni dizajn i funkcionalna resenja <br />
-            obezbedjujemo kvalitet, komfor i <br />
-            dugotrajnu vrednost. <br />
-            Svakom projektu pristupamo sa posebnom <br /> paznjom, birajuci proverene
-            materijale i <br /> prateci najvise standarde gradnje. <br />
-            Nas cilj je da svaki prostor postane mesto u<br />  kojem se ljudi osecaju
-            bezbedno i zadovoljno.
-          </p>
-        </div>    
-
-
-          <img class="radnik" src="ProjectPics/radnik.jpg" alt="radnik1" />
-          <img class="dekoracije" src="ProjectPics/plus.JPG" alt="dekoracije" />
       </div>
+
+
+
+      <div class="zelenaLinija"></div>
+
+      <img class="radnik" src="ProjectPics/radnik.jpg" alt="radnik1" />
+      <img class="dekoracije" src="ProjectPics/plus.JPG" alt="dekoracije" />
+    
     </section>
 
-
-
-    <!-- ŠESTA POZADINA / ZAŠTO NAS -->
-    <div class="sestaPozadina1">
-      <div class="ElementiSpojeni">
-        <img src="ProjectPics/element 4.png" alt="element" />
-        <img src="ProjectPics/element 5.png" alt="element" />
+      <div class="prelazIzmedjuSekcija">
+        <div class="elementiPrelaz">
+          <img src="ProjectPics/element 4.png" alt="element" />
+          <img src="ProjectPics/element 5.png" alt="element" />
+        </div>
       </div>
+
+
+    
+
+    <!-- ZASTO NAS -->
+    <section class="sestaPozadina1">
+
 
       <p class="naslov12">Zašto izabrati nas?</p>
 
+      <img class="vector" src="ProjectPics/Vector (2).png" alt="vector" />
 
+      <div class="rectangle">
+        <div class="rec">
+          <img class="bgRec" src="ProjectPics/Rectangle 86.png" alt="Rectangle 1" />
+          <img class="innerImg" src="ProjectPics/izgradnja.png" alt="Izgradnja" />
+          <p class="recText">
+            VRHUNSKI KVALITET<br />
+            <span>IZGRADNJE</span>
+          </p>
+        </div>
 
+        <div class="rec">
+          <img class="bgRec" src="ProjectPics/Rectangle 86.png" alt="Rectangle 2" />
+          <img class="innerImg" src="ProjectPics/rokovi.png" alt="Rokovi" />
+          <p class="recText">
+            POŠTOVANJE ROKOVA<br />
+            <span>IZGRADNJE</span>
+          </p>
+        </div>
 
-      <div>
-        <img class="vector" src="ProjectPics/Vector (2).png" alt="vector" />
+        <div class="rec">
+          <img class="bgRec" src="ProjectPics/Rectangle 86.png" alt="Rectangle 3" />
+          <img class="innerImg" src="ProjectPics/materijali.png" alt="Materijali" />
+          <p class="recText">
+            NAJKVALITETNIJI<br />
+            <span>MATERIJALI</span>
+          </p>
+        </div>
 
-        <div class="rectangle">
+        <div class="rec">
+          <img class="bgRec" src="ProjectPics/Rectangle 86.png" alt="Rectangle 4" />
+          <img class="innerImg" src="ProjectPics/uknjizeno.png" alt="Uknjiženo" />
+          <p class="recText">
+            SVI STANOVI<br />
+            <span>KNJIŽENI</span>
+          </p>
+        </div>
+      </div>
+    </section>
 
-         <div class="rec">
-            <img class="bgRec" src="ProjectPics/Rectangle 86.png" alt="Rectangle 1" />
-            <img class="innerImg" src="ProjectPics/izgradnja.png" alt="Izgradnja" />
-            <p class="recText">
-              VRHUNSKI KVALITET<br />
-              <span style="margin-left: 22px;">IZGRADNJE</span>
-            </p>
-          </div>
+    <img src="ProjectPics/Gradus 21.JPG" alt="Gradus21" />
 
-          <div class="rec">
-            <img class="bgRec" src="ProjectPics/Rectangle 86.png" alt="Rectangle 2" />
-            <img class="innerImg" src="ProjectPics/rokovi.png" alt="Rokovi" />
-            <p class="recText">
-              POŠTOVANJE ROKOVA<br />
-              <span style="margin-left: 25px;">IZGRADNJE</span>
-            </p>
-          </div>
-
-          <div class="rec">
-            <img class="bgRec" src="ProjectPics/Rectangle 86.png" alt="Rectangle 3" />
-            <img class="innerImg" src="ProjectPics/materijali.png" alt="Materijali" />
-            <p class="recText">
-              NAJKVALITETNIJI <br />
-              <span style="margin-left: 15px;">MATERIJALI</span>
-            </p>
-          </div>
-
-          <div class="rec">
-            <img class="bgRec" src="ProjectPics/Rectangle 86.png" alt="Rectangle 4" />
-            <img class="innerImg" src="ProjectPics/uknjizeno.png" alt="Uknjiženo" />
-            <p class="recText">
-              <span style="margin-left:15px;" >SVI STANOVI <br /></span>
-              <span style="margin-left: 28px;">KNJIŽENI</span>
-            </p>
-          </div>
+    <!-- PARTNERI -->
+    <div class="sedmaPozadina" id="partneri">
+      <div class="kompoNentaWrapper">
+        <div class="kompoNenta">
+          <img src="ProjectPics/Component 1.png" alt="Komponenta" />
+          <img src="ProjectPics/Component 1.png" alt="Komponenta" />
         </div>
       </div>
     </div>
-    
 
-    <img src="ProjectPics/Gradus 21.JPG" alt="Gradus21">
-
-      <div class="sedmaPozadina" id="partneri">
-    <div class="kompoNentaWrapper">
-      <div class="kompoNenta">
-        <img src="ProjectPics/Component 1.png" alt="Komponenta" />
-        <img src="ProjectPics/Component 1.png" alt="Komponenta" />
-
-      </div>
-    </div>
-  </div>
-
-
-    <div class="osmaPozadina">
+    <!-- MISLJENJA -->
+    <section class="osmaPozadina">
       <p class="p1">MIŠLJENJA KUPCA</p>
       <p class="p2">
         Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -376,35 +312,22 @@
         1500s,
       </p>
 
-
-      
       <img
         class="zgradaSlika"
         src="ProjectPics/zgradaslika.png"
         alt="zgradaslika"
       />
 
-
-
       <div class="glavnaKutija">
         <div class="kutija1">
           <div class="stars1">
-            <svg viewBox="0 0 24 24">
-              <path d="M12 17l-5 3 1-6-4-3 6-.5L12 5l2 5.5 6 .5-4 3 1 6z" />
-            </svg>
-            <svg viewBox="0 0 24 24">
-              <path d="M12 17l-5 3 1-6-4-3 6-.5L12 5l2 5.5 6 .5-4 3 1 6z" />
-            </svg>
-            <svg viewBox="0 0 24 24">
-              <path d="M12 17l-5 3 1-6-4-3 6-.5L12 5l2 5.5 6 .5-4 3 1 6z" />
-            </svg>
-            <svg viewBox="0 0 24 24">
-              <path d="M12 17l-5 3 1-6-4-3 6-.5L12 5l2 5.5 6 .5-4 3 1 6z" />
-            </svg>
-            <svg viewBox="0 0 24 24">
-              <path d="M12 17l-5 3 1-6-4-3 6-.5L12 5l2 5.5 6 .5-4 3 1 6z" />
-            </svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17l-5 3 1-6-4-3 6-.5L12 5l2 5.5 6 .5-4 3 1 6z" /></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17l-5 3 1-6-4-3 6-.5L12 5l2 5.5 6 .5-4 3 1 6z" /></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17l-5 3 1-6-4-3 6-.5L12 5l2 5.5 6 .5-4 3 1 6z" /></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17l-5 3 1-6-4-3 6-.5L12 5l2 5.5 6 .5-4 3 1 6z" /></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17l-5 3 1-6-4-3 6-.5L12 5l2 5.5 6 .5-4 3 1 6z" /></svg>
           </div>
+
           <p>
             Lorem Ipsum is simply dummy text of the <br />
             printing and typesetting industry. Lorem <br />
@@ -418,22 +341,13 @@
 
         <div class="kutija2">
           <div class="stars2">
-            <svg viewBox="0 0 24 24">
-              <path d="M12 17l-5 3 1-6-4-3 6-.5L12 5l2 5.5 6 .5-4 3 1 6z" />
-            </svg>
-            <svg viewBox="0 0 24 24">
-              <path d="M12 17l-5 3 1-6-4-3 6-.5L12 5l2 5.5 6 .5-4 3 1 6z" />
-            </svg>
-            <svg viewBox="0 0 24 24">
-              <path d="M12 17l-5 3 1-6-4-3 6-.5L12 5l2 5.5 6 .5-4 3 1 6z" />
-            </svg>
-            <svg viewBox="0 0 24 24">
-              <path d="M12 17l-5 3 1-6-4-3 6-.5L12 5l2 5.5 6 .5-4 3 1 6z" />
-            </svg>
-            <svg viewBox="0 0 24 24">
-              <path d="M12 17l-5 3 1-6-4-3 6-.5L12 5l2 5.5 6 .5-4 3 1 6z" />
-            </svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17l-5 3 1-6-4-3 6-.5L12 5l2 5.5 6 .5-4 3 1 6z" /></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17l-5 3 1-6-4-3 6-.5L12 5l2 5.5 6 .5-4 3 1 6z" /></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17l-5 3 1-6-4-3 6-.5L12 5l2 5.5 6 .5-4 3 1 6z" /></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17l-5 3 1-6-4-3 6-.5L12 5l2 5.5 6 .5-4 3 1 6z" /></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17l-5 3 1-6-4-3 6-.5L12 5l2 5.5 6 .5-4 3 1 6z" /></svg>
           </div>
+
           <p>
             Lorem Ipsum is simply dummy text of the <br />
             printing and typesetting industry. <br />
@@ -442,98 +356,80 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-<footer>
+    <!-- FOOTER -->
+    <footer>
+      <div class="devetaPozadina">
+        <div class="leviBlok">
+          <img class="logoFooter" src="ProjectPics/Group.png" alt="logoFooter" />
 
+          <div class="kontakti" id="kontakt">
+            <div class="kontaktBlok">
+              <img src="ProjectPics/sms-tracking.png" alt="email" />
+              <p class="kontakt">office@gradus.rs</p>
+            </div>
 
+            <div class="kontaktBlok">
+              <img src="ProjectPics/call.png" alt="telefonbroj" />
+              <p class="kontakt">063/610-747</p>
+            </div>
 
-  <div class="devetaPozadina">
-    
-    <!-- Levi blok sa logom i kontaktima -->
-    <div class="leviBlok">
-      <img class="logoFooter" src="ProjectPics/Group.png" alt="logoFooter" />
-
-
-
-      <div class="kontakti" id="kontakt">
-        <div class="kontaktBlok">
-          <img src="ProjectPics/sms-tracking.png" alt="email">
-          <p class="kontakt">office@gradus.rs</p>
+            <div class="kontaktBlok">
+              <img src="ProjectPics/location.png" alt="lokacija" />
+              <p class="kontakt">Dimitrija Tucovica 48/A2</p>
+            </div>
+          </div>
         </div>
 
-        <div class="kontaktBlok">
-          <img src="ProjectPics/call.png" alt="telefonbroj">
-          <p class="kontakt">063/610-747</p>
-        </div>
+        <div class="futureProjectsWrapper">
+          <p class="futureProjects">
+            Would you like to talk about your future project?
+          </p>
 
-
-
-        <div class="kontaktBlok">
-          <img src="ProjectPics/location.png" alt="lokacija">
-          <p class="kontakt">Dimitrija Tucovica 48/A2</p>
+          <button class="followBtn">
+            <span class="text">Follow us</span>
+            <span class="circle"></span>
+            <span class="arrow">→</span>
+          </button>
         </div>
       </div>
-    </div>
 
-
-    <!-- Desni blok sa tekstom i Follow Us -->
-    <div class="futureProjectsWrapper">
-        <p class="futureProjects">Would you like to talk about your future project?</p>
-
-
-        <button class="followBtn">
-            <span class="text">Follow us</span>
-
-            <span class="circle"></span>
-
-            <span class="arrow">→</span>
-        </button>
-
-    </div>
-
-
-  </div>
-
-  <!-- Donji deo sa autorskim pravima -->
       <div class="allRights">
         <p class="p3">All Rights Reserved © 2026 GRADUS</p>
       </div>
 
+      <div class="popup-overlay" id="popup">
+        <div class="popup-box">
+          <button class="closeBtn">&times;</button>
 
+          <div class="inner-box">
+            <p class="mainText">
+              Zapratite nas i budite deo naše priče o kvalitetnoj gradnji
+            </p>
 
+            <div class="social-item">
+              <img src="ProjectPics/mingcute_instagram-fill.png" alt="Instagram" />
+              <span>Instagram</span>
+            </div>
 
-  <div class="popup-overlay" id="popup">
-  <div class="popup-box">
-    <button class="closeBtn">&times;</button>
-    <div class="inner-box">
-      <p class="mainText">Zapratite nas i budite deo naše priče o kvalitetnoj gradnji</p>
+            <div class="social-item">
+              <img src="ProjectPics/ic_baseline-facebook.png" alt="Facebook" />
+              <span>Facebook</span>
+            </div>
 
-      <div class="social-item">
-        <img src="ProjectPics/mingcute_instagram-fill.png" alt="Instagram">
-        <span>Instagram</span>
+            <p class="popText">Budite uvek u toku sa našim novostima.</p>
+
+            <div class="email-box">
+              <input type="email" placeholder="enter your email address" />
+            </div>
+
+            <button class="submitBtn">PRIJAVI ME</button>
+          </div>
+        </div>
       </div>
-
-      <div class="social-item">
-        <img src="ProjectPics/ic_baseline-facebook.png" alt="Facebook">
-        <span>Facebook</span>
-      </div>
-
-      <p class="popText">Budite uvek u toku sa našim novostima.</p>
-
-      <div class="email-box">
-        <input type="email" placeholder="enter your email address">
-      </div>
-
-      <button class="submitBtn">PRIJAVI ME</button>
-    </div>
-  </div>
-</div>
-
-
-
+    </footer>
 
     <script src="home.js"></script>
-</body>
-
+  </body>
 </html>
