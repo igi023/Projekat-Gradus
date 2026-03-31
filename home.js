@@ -1,12 +1,16 @@
-function promeniSliku(index) {
-  if (window.innerWidth <= 400) {
-    return;
-  }
+let startX = 0;
+let currentIndex = 0;
 
+function promeniSliku(index) {
   const slike = document.querySelectorAll(".slika");
   const dugmad = document.querySelectorAll(".pages span");
 
   if (!slike.length || !dugmad.length) return;
+
+  // ispod 768px dugmad se ne koriste
+  if (window.innerWidth < 768) {
+    return;
+  }
 
   slike.forEach((slika) => slika.classList.remove("aktivna"));
   dugmad.forEach((dugme) => {
@@ -20,10 +24,9 @@ function promeniSliku(index) {
   if (dugmad[index]) {
     dugmad[index].style.background = "#9DCA3E";
   }
-}
 
-let startX = 0;
-let currentIndex = 0;
+  currentIndex = index;
+}
 
 const container = document.querySelector(".slider");
 
@@ -33,7 +36,8 @@ if (container) {
   });
 
   container.addEventListener("touchend", (e) => {
-    if (window.innerWidth > 400) return;
+    // swipe radi na svim ekranima do 768px uključujući 768
+    if (window.innerWidth > 768) return;
 
     const endX = e.changedTouches[0].clientX;
     const diff = startX - endX;
