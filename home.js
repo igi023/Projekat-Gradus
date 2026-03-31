@@ -1,4 +1,8 @@
 function promeniSliku(index) {
+  if (window.innerWidth <= 400) {
+    return;
+  }
+
   const slike = document.querySelectorAll(".slika");
   const dugmad = document.querySelectorAll(".pages span");
 
@@ -16,6 +20,39 @@ function promeniSliku(index) {
   if (dugmad[index]) {
     dugmad[index].style.background = "#9DCA3E";
   }
+}
+
+let startX = 0;
+let currentIndex = 0;
+
+const container = document.querySelector(".slider");
+
+if (container) {
+  container.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+  });
+
+  container.addEventListener("touchend", (e) => {
+    if (window.innerWidth > 400) return;
+
+    const endX = e.changedTouches[0].clientX;
+    const diff = startX - endX;
+
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) {
+        currentIndex++;
+      } else {
+        currentIndex--;
+      }
+
+      const slike = document.querySelectorAll(".slika");
+      if (currentIndex < 0) currentIndex = 0;
+      if (currentIndex >= slike.length) currentIndex = slike.length - 1;
+
+      slike.forEach((slika) => slika.classList.remove("aktivna"));
+      slike[currentIndex].classList.add("aktivna");
+    }
+  });
 }
 
 /* scroll to top */
