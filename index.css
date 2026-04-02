@@ -56,9 +56,7 @@ body {
   transition: all 0.3s ease;
 }
 
-.onamaMobile {
-  display: none;
-}
+
 
 .site-header.shrink {
   height: 65px;
@@ -818,7 +816,7 @@ body {
   width: 450px;
   position: relative;
   top: 220px;
-  left: 12%;
+  left: 11%;
   overflow: hidden;
   
 }
@@ -1181,6 +1179,58 @@ margin-bottom: 90px;
   margin: 0;
 }
 
+
+@media (max-width: 1300px) {
+  .hero-text {
+    font-size: 40px;
+  }
+   
+   .tekstBlok {
+    width: 760px;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: 20px;
+  }
+
+  .tekstBlok h4 {
+    margin: 0 0 16px 0;
+  }
+
+  .PROJEKAT {
+    font-size: 31px;
+  }
+
+  .Stanojav {
+    font-size: 29px;
+    margin-top: 10px;
+  }
+
+  .opis {
+    font-size: 15px;
+    line-height: 1.55;
+    margin-left: 55px;
+  }
+
+  .statistika {
+    max-width: 650px;
+    margin-top: 40px;
+    margin-left: 65px;
+    gap: 10px;
+  }
+
+  .broj {
+    font-size: 42px;
+  }
+
+  .tekst {
+    font-size: 15px;
+  }
+
+ 
+}
+
+
+
 /* ========================================= */
 /* 1200px */
 /* ========================================= */
@@ -1200,7 +1250,7 @@ margin-bottom: 90px;
   }
 
   .main-nav {
-    margin-right: 70px;
+    margin-right: 30px;
   }
 
   .main-nav a {
@@ -1380,17 +1430,18 @@ margin-bottom: 90px;
 /* ========================================= */
 
 @media (max-width: 992px) {
+
   .PrvaPozadina {
     grid-template-columns: 1fr;
     min-height: auto;
   }
 
-.onamaMobile {
-  display: none;
-}
-  .separator {
+  .onamaMobile {
     display: none;
   }
+    .separator {
+      display: none;
+    }
 
   .PrvaSlika {
     min-height: 320px;
@@ -1563,7 +1614,7 @@ margin-bottom: 90px;
   }
 
   .sestaPozadina1 {
-    min-height: 820px;
+    min-height: 420px;
   }
 
   .naslov12 {
@@ -1571,21 +1622,20 @@ margin-bottom: 90px;
     top: 30px;
   }
 
-  .vector {
-    display: none;
-  }
 
   .rectangle {
     position: relative;
     transform: none;
     left: auto;
-    bottom: auto;
-    top: 120px;
+    bottom: 70px;
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
     padding: 0 20px 40px 20px;
   }
+
+
+
 
   .osmaPozadina {
     min-height: 760px;
@@ -1651,7 +1701,7 @@ margin-bottom: 90px;
   }
 }
 
-/* ========================================= */
+
 /* 768px */
 
 @media (max-width: 768px) {
@@ -1746,6 +1796,7 @@ margin-bottom: 90px;
     gap: 14px;
     margin: 0;
     padding: 0;
+    
   }
 
   .main-nav li {
@@ -1989,6 +2040,17 @@ margin-bottom: 90px;
   color: #fff;
 }
 
+  .opis {
+    width: 100%;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: left;
+    margin: 0;
+  }
+
+
+
+
 .statistika {
   order: 2;
   width: 100%;
@@ -2068,21 +2130,6 @@ margin-bottom: 90px;
   margin-top: 2px;
 }
 
-/* OPIS */
-.opis {
-  width: 100%;
-  margin: 0;
-  font-size: 12px;
-  line-height: 1.8;
-  text-align: left;
-}
-
-.red1,
-.red2,
-.red3 {
-  margin-left: 0;
-  display: inline;
-}
 
 /* STATISTIKA */
 .item {
@@ -2147,8 +2194,8 @@ margin-bottom: 90px;
     height: 5px;
     background: #9dca3e;
   }
-
-  .radnik {
+     
+   .radnik {
     display: block;
     position: relative;
     width: 100%;
@@ -2158,23 +2205,12 @@ margin-bottom: 90px;
     object-fit: cover;
   
   }
+ 
   .dekoracije {
     display: none;
   }
 
-  .prelazIzmedjuSekcija {
-    position: relative;
-    bottom: auto;
-    width: 100%;
-    height: 56px;
-    background: #3b4529;
-    overflow: hidden;
-  }
-
-  .elementiPrelaz {
-    display: none;
-  }
-
+  
   /* ================= ZASTO NAS ================= */
 
   .sestaPozadina1 {
@@ -2195,65 +2231,76 @@ margin-bottom: 90px;
     margin: 0 0 22px;
     color: #9dca3e;
   }
+.vector {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: auto;
+  width: 100%;
+  height: 120px;
+  object-fit: none;
+  opacity: 0.35;
+  pointer-events: none;
+}
 
-  .vector {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    top: auto;
-    width: 100%;
-    height: 120px;
-    object-fit: cover;
-    opacity: 0.35;
-    pointer-events: none;
-  }
+.rectangle {
+  position: relative;
+  top: 20px;
+  left: auto;
+  bottom: auto;
+  transform: none;
+  padding: 0 12px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 8px;
+}
 
-  .rectangle {
-    position: relative;
-    top: auto;
-    left: auto;
-    bottom: auto;
-    transform: none;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px 10px;
-    padding: 0 2px 36px;
-    justify-items: center;
-  }
+.rec {
+  position: relative;
+  flex: 1 1 0;
+  max-width: 150px;
+  min-width: 95px;
+  height: 110px;
+  border-radius: 24px;
+  overflow: hidden;
+  transform: none;
+}
 
-  .rec {
-    width: 100%;
-    max-width: 180px;
-    height: 124px;
-    transform: none;
-  }
+.bgRec {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  display: block;
+}
 
-  .bgRec {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+.innerImg {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  top: 34%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
-  .innerImg {
-    width: 34px;
-    height: 34px;
-    top: 34%;
-    left: 50%;
-  }
-
-  .recText {
-    width: 90%;
-    bottom: 12px;
-    font-size: 10px;
-    line-height: 1.25;
-  }
+.recText {
+  position: absolute;
+  width: 86%;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+  font-size: 8px;
+  line-height: 1.2;
+  text-align: center;
+}
 
   img[alt="Gradus21"] {
     width: 100%;
-    height: 92px;
-    object-fit: cover;
+    height: 40px;
+    
   }
 
   /* ================= PARTNERI ================= */
@@ -2261,7 +2308,7 @@ margin-bottom: 90px;
   .sedmaPozadina {
     height: auto;
     background: #fff;
-    border-top: 5px solid #9dca3e;
+    
     border-bottom: 5px solid #9dca3e;
     padding: 0;
   }
@@ -2271,23 +2318,23 @@ margin-bottom: 90px;
   }
 
   .kompoNenta {
-    animation: none;
     gap: 0;
     display: flex;
     width: max-content;
   }
 
   .kompoNenta img {
-    height: 78px;
+    height: 40px;
     width: auto;
     margin-top: 0;
     max-width: none;
+    padding: 5px;
   }
 
   /* ================= MISLJENJA ================= */
 
   .osmaPozadina {
-    min-height: auto;
+    min-height: 700px;
     padding: 34px 0 90px;
     border-top: none;
     background: #3b4529;
@@ -2295,34 +2342,27 @@ margin-bottom: 90px;
 
   .p1 {
     position: static;
-    font-size: 25px;
+    display: block;
+    font-size: 22px;
     line-height: 1.2;
     color: #9dca3e;
     margin: 0;
-    padding: 0 26px;
+    padding-left: 20px !important;
     text-align: left;
   }
 
-  .p2 {
-    position: static;
-    margin: 22px 0 0;
-    padding: 0 26px;
-    font-size: 12px;
-    line-height: 1.8;
-    color: #fff;
-    text-align: left;
-  }
+  
+  
 
   .zgradaSlika {
     display: block;
     position: absolute;
-    width: 160px;
-    height: auto;
-    right: -16px;
-    bottom: -10px;
-    top: auto;
+    width: 230px;
+    height: 200px;
+    right:96px;
+    top: 490px;
     transform: scaleX(-1);
-    opacity: 0.55;
+    
   }
 
   .glavnaKutija {
@@ -2339,9 +2379,9 @@ margin-bottom: 90px;
 
   .kutija1,
   .kutija2 {
-    width: 100%;
+    width: 80%;
     height: 176px;
-    padding: 18px 20px;
+    margin-left: 30px;
     border: 1px solid #9dca3e;
     font-size: 12px;
     justify-content: flex-start;
@@ -2434,7 +2474,7 @@ margin-bottom: 90px;
     line-height: 1.5;
     text-align: center;
     color: #9dca3e;
-    max-width: 150px;
+    max-width: 160px;
   }
 
   .followBtn {
@@ -2501,7 +2541,8 @@ margin-bottom: 90px;
     margin: 40px auto 14px;
     border-radius: 24px;
   }
-}
+
+
 
 @media (max-width: 400px) {
   .site-header {
@@ -2512,8 +2553,6 @@ margin-bottom: 90px;
     height: 25px;
     margin-top: 20px;
     margin-left: 20px;
-    
-    
   }
 
   .callUs img {
@@ -2529,21 +2568,11 @@ margin-bottom: 90px;
     margin-top: 8px;
   }
 
+  
 
 
-  .PrvaSlika {
-    height: 410px;
-    min-height: 410px;
-    width: 400px;
-    margin-right: 200px;
-    
-  }
 
-  .desna-strana {
-    min-height: 410px;
-  }
-
-.hero-content {
+  .hero-content {
     position: absolute;
     top: 54px;
     right: 20px;
@@ -2554,14 +2583,14 @@ margin-bottom: 90px;
   }
 
   .hero-text {
-    font-size: 10px;
+    font-size: 12px;
     line-height: 1.05;
     letter-spacing: 0.5px;
     margin: 0;
   }
 
   .heroText {
-    font-size: 5px;
+    font-size: 8px;
     line-height: 1.1;
     margin-top: 2px;
   }
@@ -2578,14 +2607,12 @@ margin-bottom: 90px;
 
   .plusPattern1 {
     position: absolute;
-    top: 350px;
+    top: 360px;
     left: 92%;
-    transform: translateX(-50%);
-    width: 240px;
-    height: 140px;
+    transform: translateX(-50%) scale(1.5);
+    width: 230px;
+    height: 119px;
   }
-
-
 
   .projekti {
     margin-bottom: 120px;
@@ -2604,25 +2631,28 @@ margin-bottom: 90px;
   .pPrvi,
   .pDrugi,
   .opis,
-  .onamaText p,
   .p2 {
     font-size: 13px;
+  }
+
+  .pPrvi .boldTekst {
+    display: block;
+  }
+
+  .pDrugi .boldTekst:nth-of-type(2) {
+    display: block;
   }
 
 
 
 
-.cetvrtaPozadina{
-    height:800px;
-
-}
-
-
-  @media (max-width: 400px) {
+  .cetvrtaPozadina {
+    height: 800px;
+  }
 
   .opis {
     width: 100%;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 21px;
     text-align: left;
     margin: 0;
@@ -2634,7 +2664,7 @@ margin-bottom: 90px;
   }
 
   .red1 {
-    padding-left: 0px;
+    padding-left: 5px;
     margin-bottom: 10px;
   }
 
@@ -2643,7 +2673,6 @@ margin-bottom: 90px;
     margin-bottom: 10px;
   }
 
-  /* red3 pocinje gde i tekst reda2 */
   .red3 {
     padding-left: 5px;
   }
@@ -2653,7 +2682,6 @@ margin-bottom: 90px;
     font-weight: 700;
   }
 
-}
   .slika,
   .slika.aktivna {
     height: 320px;
@@ -2664,22 +2692,25 @@ margin-bottom: 90px;
     top: 14px;
   }
 
-.PROJEKAT {
-  font-size: 24px;
-  margin-top: 20px;
-  text-align: left;
-  display: block;
-  margin-bottom: 2px;
-}
+  .PROJEKAT {
+    font-size: 24px;
+    margin-top: 20px;
+    text-align: left;
+    display: block;
+    margin-bottom: 2px;
+  }
 
-.Stanojav {
-  font-size: 24px;
-  text-align: left;
-  display: block;
-  line-height: 1.2;
-  padding-right: 150px;
+  .Stanojav {
+    font-size: 24px;
+    text-align: left;
+    display: block;
+    line-height: 1.2;
+    padding-right: 150px;
+  }
 
-}
+  .item {
+    margin-top: 10px;
+  }
 
   .statistika {
     gap: 6px;
@@ -2693,33 +2724,132 @@ margin-bottom: 90px;
     font-size: 11px;
   }
 
+  .prelazIzmedjuSekcija {
+    position: relative;
+    bottom: 60px;
+    height: 0;
+    z-index: 100;
+  }
 
+  .elementiPrelaz {
+    position: absolute;
+    top: -743px;
+    left: 17%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    z-index: 100;
+  }
 
+  .elementiPrelaz img:nth-child(1) {
+    width: 140px;
+    margin-top: 90px;
+    margin-right: 0;
+  }
 
+  .elementiPrelaz img:nth-child(2) {
+    width: 75px;
+    margin-left: -77px;
+    margin-top: 32px;
+  }
+
+  .onamaText p {
+    width: 80%;
+
+    margin-left: 50px;
+  }
 
   .radnik {
     height: 360px;
-    width: 400px ;
+    width: 400px;
+    right: auto;
     
   }
+
+
+ .sestaPozadina1 {
+  position: relative;
+  min-height: 320px;
+  overflow: hidden;
+}
 
   .naslov12 {
     font-size: 21px;
   }
 
-  .rec {
-    max-width: 155px;
-    height: 112px;
-  }
 
-  .innerImg {
-    width: 30px;
-    height: 30px;
-  }
 
-  .recText {
-    font-size: 9px;
-  }
+.vector {
+  display: block;
+  position: absolute;
+  bottom: 10x;
+  left: 0;
+  top: auto;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.rectangle {
+  position: relative;
+  top: 60px;
+  left: auto;
+  bottom: auto;
+  transform: none;
+  width: 100%;
+  padding: 0 8px 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 6px;
+  z-index: 3;
+}
+
+
+
+.rec {
+   z-index: 4;
+  position: relative;
+  flex: 1 1 0;
+  max-width: 122px;
+  min-width: 88px;
+  height: 96px;
+  border-radius: 20px;
+  overflow: hidden;
+  transform: none;
+}
+
+.bgRec {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  display: block;
+}
+
+.innerImg {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 34%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.recText {
+  position: absolute;
+  width: 84%;
+  left: 50%;
+  bottom: 8px;
+  transform: translateX(-50%);
+  font-size: 7px;
+  line-height: 1.15;
+  text-align: center;
+}
 
   .p1 {
     font-size: 22px;
@@ -2747,28 +2877,43 @@ margin-bottom: 90px;
   }
 
   .devetaPozadina {
-    grid-template-columns: 1fr;
+
     gap: 18px;
     padding: 18px 16px 16px;
   }
 
   .logoFooter {
-    width: 92px;
-    margin: 0 auto 14px;
+    width:90px;
+  
   }
 
   .kontakti {
     align-items: flex-start;
   }
 
-  .futureProjectsWrapper {
-    align-items: center;
-  }
+.futureProjectsWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 10px;
+  padding-right: 10px;
+}
 
-  .futureProjects {
-    max-width: 210px;
-    font-size: 12px;
-  }
+.futureProjects {
+  max-width: 210px;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: right;
+}
+
+.followBtn {
+  width: 116px;
+  height: 36px;
+  margin: 0;
+}
 
   .followBtn {
     width: 116px;
