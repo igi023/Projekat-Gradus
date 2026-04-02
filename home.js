@@ -1,34 +1,39 @@
 let startX = 0;
 let currentIndex = 0;
 
+function updateSlider() {
+  const slike = document.querySelectorAll(".slika");
+  const dugmad = document.querySelectorAll(".pages span");
+
+  if (!slike.length) return;
+
+  slike.forEach((slika) => slika.classList.remove("aktivna"));
+
+  if (slike[currentIndex]) {
+    slike[currentIndex].classList.add("aktivna");
+  }
+
+  dugmad.forEach((dugme, index) => {
+    dugme.style.background = index === currentIndex ? "#9DCA3E" : "#efefef";
+  });
+}
+
 function promeniSliku(index) {
   const slike = document.querySelectorAll(".slika");
   const dugmad = document.querySelectorAll(".pages span");
 
   if (!slike.length || !dugmad.length) return;
 
-  // ispod 768px dugmad se ne koriste
+  // na telefonu ne koristis klik na kruzice
   if (window.innerWidth < 768) {
     return;
   }
 
-  slike.forEach((slika) => slika.classList.remove("aktivna"));
-  dugmad.forEach((dugme) => {
-    dugme.style.background = "#efefef";
-  });
-
-  if (slike[index]) {
-    slike[index].classList.add("aktivna");
-  }
-
-  if (dugmad[index]) {
-    dugmad[index].style.background = "#9DCA3E";
-  }
-
   currentIndex = index;
+  updateSlider();
 }
 
-const container = document.querySelector(".slider");
+const container = document.querySelector(".Zgrada");
 
 if (container) {
   container.addEventListener("touchstart", (e) => {
@@ -36,11 +41,14 @@ if (container) {
   });
 
   container.addEventListener("touchend", (e) => {
-    // swipe radi na svim ekranima do 768px uključujući 768
+    // swipe radi na svim ekranima do 768px ukljucujuci 768
     if (window.innerWidth > 768) return;
 
     const endX = e.changedTouches[0].clientX;
     const diff = startX - endX;
+    const slike = document.querySelectorAll(".slika");
+
+    if (!slike.length) return;
 
     if (Math.abs(diff) > 50) {
       if (diff > 0) {
@@ -49,12 +57,10 @@ if (container) {
         currentIndex--;
       }
 
-      const slike = document.querySelectorAll(".slika");
       if (currentIndex < 0) currentIndex = 0;
       if (currentIndex >= slike.length) currentIndex = slike.length - 1;
 
-      slike.forEach((slika) => slika.classList.remove("aktivna"));
-      slike[currentIndex].classList.add("aktivna");
+      updateSlider();
     }
   });
 }
