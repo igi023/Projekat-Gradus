@@ -1705,6 +1705,8 @@ margin-bottom: 90px;
 /* 768px */
 
 @media (max-width: 768px) {
+
+
   html,
   body {
     overflow-x: hidden;
@@ -2543,7 +2545,7 @@ margin-bottom: 90px;
   }
 
 
-
+}
 @media (max-width: 400px) {
   .site-header {
     padding: 10px 12px 8px;
