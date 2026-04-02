@@ -1,8 +1,16 @@
+let startX = 0;
+let currentIndex = 0;
+
 function promeniSliku(index) {
   const slike = document.querySelectorAll(".slika");
   const dugmad = document.querySelectorAll(".pages span");
 
   if (!slike.length || !dugmad.length) return;
+
+  // ispod 768px dugmad se ne koriste
+  if (window.innerWidth < 768) {
+    return;
+  }
 
   slike.forEach((slika) => slika.classList.remove("aktivna"));
   dugmad.forEach((dugme) => {
@@ -16,6 +24,39 @@ function promeniSliku(index) {
   if (dugmad[index]) {
     dugmad[index].style.background = "#9DCA3E";
   }
+
+  currentIndex = index;
+}
+
+const container = document.querySelector(".slider");
+
+if (container) {
+  container.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+  });
+
+  container.addEventListener("touchend", (e) => {
+    // swipe radi na svim ekranima do 768px uključujući 768
+    if (window.innerWidth > 768) return;
+
+    const endX = e.changedTouches[0].clientX;
+    const diff = startX - endX;
+
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) {
+        currentIndex++;
+      } else {
+        currentIndex--;
+      }
+
+      const slike = document.querySelectorAll(".slika");
+      if (currentIndex < 0) currentIndex = 0;
+      if (currentIndex >= slike.length) currentIndex = slike.length - 1;
+
+      slike.forEach((slika) => slika.classList.remove("aktivna"));
+      slike[currentIndex].classList.add("aktivna");
+    }
+  });
 }
 
 /* scroll to top */
